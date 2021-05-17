@@ -1,0 +1,691 @@
+/*Sccs Importados */
+
+@import "estiloPalabras.scss";
+
+
+/*Contenido general*/
+ 
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: gray;
+}
+
+
+.header{
+    background-color: rgb(33, 37, 41);
+    padding: 0%;
+    margin: 0%;
+    border: 0%;
+    grid-area: header;
+
+    &__h1{
+        font-family: $familiaVerdana;
+        color: $tituloColor;
+        text-transform: capitalize;
+        letter-spacing: 3px;        
+        display: inline-block;   
+        border: hidden;
+        margin: 5px;           
+        padding-left: var(--bs-gutter-x,.75rem);
+    }
+
+}
+
+
+nav{
+    grid-area: menu;
+    padding: 0%;
+    
+    
+
+}
+
+ul li{
+    color: $tituloColor;
+    font-size: 18px;
+
+}
+
+ul li:hover{
+    color: lightgray;
+       
+}
+
+
+ul li:active {    
+    box-shadow: 0 5px #666;
+    transform: translateY(1px);
+  }
+    
+
+#grilla{
+    display: grid;  
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-areas:"header"
+                        "menu"
+                        "contenido"
+                        "footer";
+}
+
+main{
+    grid-area: contenido;
+    
+}
+
+footer{    
+    grid-area: footer;
+    display: flex;
+    background-color:rgb(33, 37, 41); 
+    justify-content: center;
+    padding: 2%;
+    align-content: center;
+    
+
+}
+
+
+
+footer i{
+    font-size: 25px;
+    color: $tituloColor;
+    margin-left: 5px;
+    margin-right: 5px;
+    transform: 0.2s;
+    justify-self: center;
+
+}
+
+footer i:hover{
+    color: gray;
+    transition: 0.2s;    
+}
+
+footer a{
+    text-decoration: none;
+    color: $tituloColor;
+    font-family: $familiaVerdana;
+    font-size: 25px;
+    transform: 0.2s;
+}
+
+footer a:hover{
+    color: gray;
+    transition: 0.2s;
+}
+
+
+.estiloDos{
+    color: $letraGris;
+    font-family: $familiaVerdana;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+
+.estiloDos:hover{
+    font-family: $familiaVerdana;
+    font-size: 20px;
+}
+  
+
+p{
+    color: $letraGris;
+    font-family: $familiaVerdana;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Fin conenido general */
+
+/* Conenido de la pagina principal */
+
+
+.mainBack{    
+    grid-area: contenido;
+    height: 1000px;    
+    background-image: url('../Imagenes/fotoHome.png');
+
+
+    &__url{
+        max-width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+
+}
+
+.divHome{
+    
+        margin: auto;
+        width: 50%;        
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      
+}
+
+.linkHome{
+    text-decoration: none;
+}
+
+h3{
+    color: $tituloColor;
+    font-family: $familiaVerdana;
+    font-size: 3em;
+    text-shadow: 0 0 5px #0059ff;
+    
+}
+
+
+.icono{
+    &__a{
+        position: fixed;
+        bottom: 10px; 
+        right: 10px;
+        
+                
+    }
+
+}
+
+a i{
+    font-size: 35px;
+    color: rgb(37, 211, 102);
+}
+
+/* Fin del contenido de la pagina principal */
+
+/* Servicios */
+
+.cartas{
+    grid-area: contenido;     
+    margin-bottom: 5%;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "cardNovia card15 cardConvencion"
+                         "dj caternig cardOtros";
+}
+
+
+.card1{
+    background-color: rgb(33, 37, 41);
+    padding: 1%;
+    margin: 2%; 
+
+    &__body{
+
+        &__title{
+            font-family: white;
+        }
+
+        &__text{
+            font-family: white;
+        }
+
+    }
+}
+
+.card2{
+    background-color: rgb(33, 37, 41);
+    padding: 1%;
+    margin: 2%;
+
+    }
+
+.card3{
+    background-color: rgb(33, 37, 41);
+    padding: 1%;
+    margin: 2%;
+
+    }
+
+.card4{
+    background-color: rgb(33, 37, 41);
+    padding: 1%;
+    margin: 2%;
+
+    }
+
+.card5{
+        background-color: rgb(33, 37, 41);
+        padding: 1%;
+        margin: 2%;
+    
+    }
+
+.card6{
+            background-color: rgb(33, 37, 41);
+            padding: 1%;
+            margin: 2%;
+        
+        }
+
+h5{
+    color: white;
+    font-family: $familiaVerdana;
+    text-shadow: 0 0 5px #0059ff;
+}
+    
+
+/* Fin Servicios */
+
+/* Galería */
+
+#grilla{
+    background-color: black;
+}
+
+#sectionGaleria{
+    grid-area: contenido;
+    display: grid;        
+    justify-content: center;    
+    width: 100%;        
+    padding: 0%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    
+}
+
+ .img-fluid{
+     padding: 1%;
+     transition: 0.4s;
+ }
+ 
+ .img-fluid:hover{
+    transform: scale(1.04);
+    
+ }
+    
+video{
+    width: 100%; 
+    height: 100%;   
+    align-items: center;
+    padding: 1%;
+    transition: 0.4s;
+}
+
+video:hover{
+    transform: scale(1.04);
+    
+ }
+
+iframe{
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    transition: 0.4s;
+}
+
+iframe:hover{
+    transform: scale(1.04);
+    
+ }
+
+
+/* Fin Galería */
+
+/* Contenido Quienes Somos */
+#grillaQuienes{
+    display: grid;  
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-areas:"header"
+                        "menu"
+                        "contenido"
+                        "footer";
+}
+
+
+.mainQuienes {
+    grid-area: contenido;
+    width: 80%;
+    margin: 5% auto 0;    
+    display: grid;
+    grid-column: 1;
+    grid-template-rows: 1, 1, 1;
+    grid-template-areas:
+      "uno "
+      "dos"
+      "tres";
+     
+  }
+  
+  .mainQuienes .my-carousel {
+    width: 80%;
+    height: auto;
+    justify-self: center;
+    grid-area: uno;
+  }
+
+
+.quienesP{
+    margin-top: 10px;
+    grid-area: dos;
+    align-self: center;
+    justify-content: center;
+    margin: 2% 20% 2% 20%;
+    text-align: center;
+}
+
+h2{
+    color: $tituloColor;
+    font-family: $familiaVerdana;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.tabla{
+    grid-area: tres;
+
+
+    &__headppal{
+        
+
+
+        &__head{
+            th{
+                color: $tituloColor;
+                font-family: $familiaVerdana;
+                font-size: 14px;
+            } 
+
+        }
+
+
+    }
+
+    &__bodyppal{
+
+        &__body{
+                color:  $tituloColor;
+                font-family: $familiaVerdana;
+                font-size: 14px;
+        }
+
+    }
+
+
+
+
+}
+
+
+
+.tabletable-darktable-striped{
+    grid-area: contenido;
+}
+
+.sectionMargen{
+    margin-top: 5%;
+}
+
+
+
+/* Fin contenido Quienes somos */
+
+
+/* Contacto */
+
+#mainContacto{
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+    grid-template-areas: "contacto mapa"                         
+                         "numeros numeros";
+}
+
+#formContacto{
+    grid-area: contacto; 
+    margin-left: 10%;
+    margin-top: 5%;   
+}
+
+#mapa{
+    grid-area: mapa;
+    width: 95%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+
+#contacto{
+    grid-area: contacto; 
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+
+
+h6{
+    color: $tituloColor;
+    font-family: $familiaVerdana;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 24px;
+    
+}
+
+#botonC{
+    margin-right: 3%;
+}
+
+.divContatco{
+    grid-area: numeros;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.divItem{
+    padding: 1%;
+    float: initial;
+}
+
+span{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#whC{
+    color: rgb(37, 211, 102);
+    font-size: 20px;
+}
+
+#telC{
+    color: burlywood;
+    font-size: 20px;
+}
+
+#mailC{
+    color: red;
+    font-size: 20px;
+}
+
+#faceC{
+    color: rgb(66, 103, 178,);
+    font-size: 20px;
+}
+#twC{
+    color: rgb(29, 161, 242);
+    font-size: 20px;
+}
+#instaC{
+    color: #fc466b;
+    font-size: 20px;
+}
+
+/* Fin contacto */
+
+/* Medias Queries */
+
+
+@media only screen and (min-width: 768px){
+    #grilla{
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+    }
+    
+   
+    #sectionGaleria{
+        display: grid;        
+        grid-area: contenido;        
+        grid-template-columns: repeat(1, 1, 1);
+        grid-template-rows: repeat(1, 1, 1);
+        grid-template-areas:"foto1 foto2 foto3"
+                            "foto4 foto5 foto6"
+                            "video1 foto7 video2";
+                            
+                            
+    }
+
+    .cartas{
+        grid-area: contenido;
+        margin-bottom: 5%;        
+        padding: 2%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "cardNovia card15 cardConvencion"
+                             "dj caternig cardOtros";
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #fotoSiete {display:none;}
+
+}
+ 
+
+@media only screen and (max-width: 768px){
+    #grilla{
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+    }
+    
+    
+    
+    #sectionGaleria{
+        display: grid;        
+        grid-area: contenido;
+        margin-top: 1%;        
+        grid-template-columns: repeat(1, 1);
+        grid-template-rows: repeat(1, 1, 1, 1,);
+        grid-template-areas:"foto1 foto2"
+                            "foto3 foto4"
+                            "foto5 foto6"
+                            "video1 video2";
+                            
+                            
+    }
+
+    #mainContacto{
+        grid-area: contenido;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 4fr, 6fr, 1fr;
+        grid-template-areas: "contacto" 
+                              "mapa"
+                              "numeros";
+    }
+
+    #mapa{
+        grid-area: mapa;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;   
+        
+    }
+
+    
+
+
+    .divContatco{
+        display: grid;
+        grid-area: numeros;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "whC Telc mailC"
+                            "faceC twC instaC";
+    }
+
+
+    .cartas{
+        grid-area: contenido;
+        margin-bottom: 5%;        
+        padding: 2%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "cardNovia card15"
+                            "cardConvencion dj" 
+                            "caternig cardOtros";
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 480px){
+    #grilla{
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+    }
+
+    
+    #sectionGaleria{
+        display: grid;
+        margin-top: 1%;
+        grid-area: contenido;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas:"foto1"
+                            "foto2"
+                            "foto3"
+                            "foto4"
+                            "foto5"
+                            "foto6"
+                            "video1"
+                            "video2";        
+        
+    }   
+
+
+    .cartas{
+        display: grid;
+        margin-bottom: 5%;        
+        grid-area: contenido;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:"cardNovia"
+                            "card15"
+                            "cardConvencion"
+                            "dj"
+                            "caternig"
+                            "cardOtros"
+    }
+
+
+    .divContatco{
+        display: grid;
+        grid-area: numeros;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "whC Telc"
+                             "mailC faceC"
+                             "twC instaC ";
+    }
+}

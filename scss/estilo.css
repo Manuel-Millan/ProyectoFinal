@@ -1,0 +1,348 @@
+@charset "UTF-8";
+/*Sccs Importados */
+/*Contenido general*/
+body {
+  margin: 0;
+  background-color: gray; }
+
+.header {
+  background-color: #212529;
+  padding: 0%;
+  margin: 0%;
+  border: 0%;
+  grid-area: header; }
+  .header__h1 {
+    font-family: verdana;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    display: inline-block;
+    border: hidden;
+    margin: 5px;
+    padding-left: var(--bs-gutter-x, 0.75rem); }
+
+nav {
+  grid-area: menu;
+  padding: 0%; }
+  nav ul li {
+    color: white;
+    font-size: 18px; }
+    nav ul li ul li:hover {
+      color: lightgray; }
+
+#grilla {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  grid-template-areas: "header" "menu" "contenido" "footer"; }
+
+main {
+  grid-area: contenido; }
+
+footer {
+  grid-area: footer;
+  display: flex;
+  background-color: #212529;
+  justify-content: center;
+  padding: 2%;
+  align-content: center; }
+
+footer i {
+  font-size: 25px;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px; }
+
+footer i:hover {
+  color: gray;
+  transition: 0.3s; }
+
+.estiloDos {
+  color: darkslategray;
+  font-family: verdana;
+  font-size: 14px;
+  transition: 0.5s; }
+
+.estiloDos:hover {
+  font-family: verdana;
+  font-size: 20px; }
+
+p {
+  color: darkslategray;
+  font-family: verdana;
+  font-size: 15px;
+  font-weight: bold; }
+
+/* Fin conenido general */
+/* Conenido de la pagina principal */
+.mainBack {
+  grid-area: contenido;
+  height: 900px;
+  background-image: url("../Imagenes/fotoHome.png"); }
+  .mainBack__url {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden; }
+
+.divHome {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.linkHome {
+  text-decoration: none; }
+
+h3 {
+  color: white;
+  font-family: verdana;
+  font-size: 3em;
+  text-shadow: 0 0 5px #FF0000; }
+
+.icono__a {
+  position: fixed;
+  bottom: 10px;
+  right: 10px; }
+
+a i {
+  font-size: 35px;
+  color: #25d366; }
+
+/* Fin del contenido de la pagina principal */
+/* Servicios */
+#cartas {
+  margin-bottom: 20px;
+  padding: 5%; }
+
+.card1__body__title {
+  font-family: verdana; }
+.card1__body__text {
+  font-family: verdana; }
+
+.card2__body__title {
+  font-family: verdana; }
+.card2__body__text {
+  font-family: verdana; }
+
+.card3__body__title {
+  font-family: verdana; }
+.card3__body__text {
+  font-family: verdana; }
+
+.card4__body__title {
+  font-family: verdana; }
+.card4__body__text {
+  font-family: verdana; }
+
+/* Fin Servicios */
+/* Galería */
+#sectionGaleria {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1%;
+  padding: 0%;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+video {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin-right: 10px; }
+
+iframe {
+  width: 100%; }
+
+div video {
+  width: 95%;
+  height: 100%;
+  padding: 0%;
+  justify-self: stretch; }
+
+div iframe {
+  max-width: 100%;
+  height: 100%;
+  padding: 0%;
+  margin-right: 10px; }
+
+/* Fin Galería */
+/* Contenido Quienes Somos */
+.mainQuienes {
+  margin-top: 5%;
+  display: grid;
+  grid-column: 1;
+  grid-template-rows: 1, 1, 1;
+  grid-template-areas: "uno " "dos" "tres";
+  /*El carrusel tiene un glitch raro que cuando cambia se desplaza a la izquierda. Arreglé que sea bien responsive pero me surgió esto*/ }
+  .mainQuienes #carouselExampleFade {
+    width: auto;
+    height: auto;
+    justify-self: center;
+    grid-area: uno; }
+    .mainQuienes #carouselExampleFade .carousel-item {
+      width: 100%;
+      height: auto; }
+      .mainQuienes #carouselExampleFade .carousel-item .imgQ {
+        max-width: 100%;
+        height: auto; }
+
+.quienesP {
+  margin-top: 10px;
+  grid-area: dos;
+  align-self: center;
+  justify-content: center;
+  margin: 2% 20% 2% 20%;
+  text-align: center; }
+
+h2 {
+  color: white;
+  font-family: verdana;
+  text-shadow: 2px 2px 4px #000000; }
+
+.tabla {
+  grid-area: tres; }
+  .tabla__headppal__head th {
+    color: white;
+    font-family: verdana;
+    font-size: 14px; }
+  .tabla__bodyppal__body {
+    color: white;
+    font-family: verdana;
+    font-size: 14px; }
+
+.tabletable-darktable-striped {
+  grid-area: contenido; }
+
+.sectionMargen {
+  margin-top: 10px; }
+
+/* Fin contenido Quienes somos */
+/* Contacto */
+.field__legend {
+  color: white;
+  font-family: verdana;
+  font-size: 15px;
+  font-weight: bold; }
+.field__label {
+  color: white;
+  font-family: verdana;
+  font-size: 15px;
+  font-weight: bold; }
+.field__input {
+  font-family: verdana;
+  font-size: 15px;
+  transition: 0.5s; }
+  .field__input input:focus {
+    background-color: #45b3f8;
+    color: white;
+    font-family: verdana; }
+
+.field2__legend {
+  color: white;
+  font-family: verdana;
+  font-size: 15px;
+  font-weight: bold; }
+.field2__label {
+  color: white;
+  font-family: verdana;
+  font-size: 15px;
+  font-weight: bold; }
+.field2__input {
+  font-family: verdana;
+  font-size: 15px;
+  transition: 0.5s; }
+  .field2__input input:focus {
+    background-color: #45b3f8;
+    color: white;
+    font-family: verdana; }
+
+.field3__boton {
+  margin-bottom: 30px; }
+
+.ul__li {
+  color: darkslategray;
+  font-family: verdana; }
+
+#dropdownMenuButton1 {
+  margin-bottom: 30px; }
+
+/* Fin contacto */
+/* Medias Queries */
+#sectionGaleria {
+  display: grid;
+  grid-area: contenido;
+  grid-template-columns: repeat(1, 1, 1);
+  grid-template-rows: repeat(1, 1, 1);
+  grid-template-areas: "foto1 foto2 foto3" "foto4 foto5 foto6" "video1 .    video2";
+  /*uso de extend*/ }
+  #sectionGaleria .anchoAlto, #sectionGaleria #fotoUno, #sectionGaleria #fotoDos, #sectionGaleria #fotoTres, #sectionGaleria #fotoCuatro, #sectionGaleria #fotoCinco, #sectionGaleria #fotoSeis, #sectionGaleria #videoUno, #sectionGaleria #videoDos {
+    max-width: 100%;
+    height: 100%; }
+  #sectionGaleria #fotoUno {
+    grid-area: foto1; }
+  #sectionGaleria #fotoDos {
+    grid-area: foto2; }
+  #sectionGaleria #fotoTres {
+    grid-area: foto3; }
+  #sectionGaleria #fotoCuatro {
+    grid-area: foto4; }
+  #sectionGaleria #fotoCinco {
+    grid-area: foto5; }
+  #sectionGaleria #fotoSeis {
+    grid-area: foto6; }
+  #sectionGaleria #videoUno {
+    grid-area: video1; }
+  #sectionGaleria #videoDos {
+    grid-area: video2; }
+
+@media only screen and (min-width: 768px) {
+  #grilla {
+    grid-template-rows: auto;
+    grid-template-columns: 100%; }
+
+  #sectionGaleria {
+    display: grid;
+    grid-area: contenido;
+    grid-template-columns: repeat(1, 1, 1);
+    grid-template-rows: repeat(1, 1, 1);
+    grid-template-areas: "foto1 foto2 foto3" "foto4 foto5 foto6" "video1 video2"; } }
+@media only screen and (max-width: 768px) {
+  #grilla {
+    grid-template-rows: auto;
+    grid-template-columns: 100%; }
+
+  #sectionGaleria {
+    display: grid;
+    grid-area: contenido;
+    grid-template-columns: repeat(1, 1);
+    grid-template-rows: repeat(1, 1, 1, 1);
+    grid-template-areas: "foto1 foto2" "foto3 foto4" "foto5 foto6" "video1 video2"; } }
+/*@media only screen and (max-width: 480px){
+    #grilla{
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+    }
+
+    
+    #sectionGaleria{
+        display: grid;
+        grid-area: contenidos;
+        grid-template-columns: 100vh;
+        grid-template-rows: repeat(8, 50px);
+        grid-template-areas:"foto1"
+                            "foto2"
+                            "foto3"
+                            "foto4"
+                            "foto5"
+                            "foto6"
+                            "video1"
+                            "video2";        
+        
+    }   
+}*/
+
+/*# sourceMappingURL=estilo.css.map */
